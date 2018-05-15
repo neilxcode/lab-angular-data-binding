@@ -2,6 +2,40 @@
   food-list works!
 </p>
 
+<div>
+  <label for="food-name">Search Food:</label>
+  <input type="text" [(ngModel)]="foodsList.name">
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div>
+    <div>
+      <label for="food-name">Name</label>
+      <input type="text" [(ngModel)]="newFood.name">
+    </div>
+    <div>
+      <label for="food-calories">Calories</label>
+      <input type="text" [(ngModel)]="newFood.calories">
+    </div>
+    <div>
+      <label for="food-image">Image</label>
+      <input type="text" [(ngModel)]="newFood.image">
+    </div>
+    <div>
+      <label for="food-quantity">Quantity</label>
+      <input type="text" [(ngModel)]="newFood.quantity">
+    </div>
+    <div>
+      <button (click)="addFood()" id ="submitButton">Submit New Food</button>
+    </div>
+</div>
+
+
 <div *ngFor="let food of foodsList">
   <div>
     <img [src]="food.image">
