@@ -9,11 +9,13 @@ import foods from '../foods';
 export class FoodListComponent implements OnInit {
   foodsList: Object[];
   newFood: any = {};
+  isVisible: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.foodsList = foods;
+    this.isVisible = false;
   }
 
   addFood(){
@@ -27,6 +29,18 @@ export class FoodListComponent implements OnInit {
     this.newFood.image = "";
     this.newFood.quantity = "";
   }
+
+  showAddFood(){
+    this.isVisible = true;
+  }
+
+  hideAddFood(){
+    this.isVisible = false;
+  }
+
+
+
+  
 
 
 
